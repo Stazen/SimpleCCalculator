@@ -3,9 +3,14 @@
 #include <string.h>
 #include <math.h>
 
-int main(int argc, char *argv[])
+void AdvancedCalculator()
 {
-    printf("Enter the calcul (sample : 10 + 10)");
+
+}
+
+void SimpleCalculator()
+{
+    printf("Enter the calcul (sample : 10 + 10)\n");
 
     float x, y, res;
     char operator;
@@ -39,12 +44,26 @@ int main(int argc, char *argv[])
         return 0;
 }
 
-float SimpleCalculator()
+int main(int argc, char *argv[])
 {
+    printf("===== Welcome to my calculator =====\nPlease choose a version of the calculator : \n1. Simple calculator \n2. Advanced calculator \n3. Exit\n");
 
-}
+    int choice;
+    scanf("%i", &choice);
 
-float AdvancedCalculator()
-{
+    switch (choice)
+    {
+        case 1:
+            SimpleCalculator();
+            break;
+        case 2:
+            AdvancedCalculator();
+            break;
+        case 3:
+            return 0;
+        default:
+            printf("Invalid choice.\n");
+    }
 
+    return 0;
 }
